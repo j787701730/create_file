@@ -1,14 +1,22 @@
 {
-  "name": "create-file",
-  "displayName": "create_file",
+  "name": "create-file-zw",
+  "displayName": "create-file-zw",
   "description": "创建文件增强版",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.102.0"
+  },
+  "icon": "dist/icon.png",
+  "publisher": "ZhengWei513",
+  "author": {
+    "name": "ZhengWei513"
   },
   "categories": [
     "Other"
   ],
+  "repository": {
+    "url": "https://github.com/j787701730/create_file.git"
+  },
   "activationEvents": [
     "onStartupFinished"
   ],
