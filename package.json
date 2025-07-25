@@ -1,0 +1,144 @@
+{
+  "name": "create-file",
+  "displayName": "create_file",
+  "description": "创建文件增强版",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "submenus": [
+      {
+        "id": "mySubmenu",
+        "label": "创建文件增强版"
+      }
+    ],
+    "commands": [
+      {
+        "command": "zw.create_html",
+        "title": "html"
+      },
+      {
+        "command": "zw.create_vue",
+        "title": "vue"
+      },
+      {
+        "command": "zw.create_ts",
+        "title": "ts"
+      },
+      {
+        "command": "zw.create_tsx",
+        "title": "tsx"
+      },
+      {
+        "command": "zw.create_dart",
+        "title": "dart"
+      },
+      {
+        "command": "zw.create_svelte",
+        "title": "svelte"
+      },
+      {
+        "command": "zw.create_css",
+        "title": "css"
+      },
+      {
+        "command": "zw.create_module.css",
+        "title": "module.css"
+      },
+      {
+        "command": "zw.create_php",
+        "title": "php"
+      },
+      {
+        "command": "zw.create_go",
+        "title": "go"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "submenu": "mySubmenu",
+          "group": "navigation",
+          "label": "创建文件增强版"
+        }
+      ],
+      "mySubmenu": [
+        {
+          "command": "zw.create_tsx",
+          "group": "a_web@1"
+        },
+        {
+          "command": "zw.create_vue",
+          "group": "a_web@2"
+        },
+        {
+          "command": "zw.create_ts",
+          "group": "a_web@111"
+        },
+        {
+          "command": "zw.create_html",
+          "group": "a_web@222"
+        },
+        {
+          "command": "zw.create_dart",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_svelte",
+          "group": "a_web@333"
+        },
+        {
+          "command": "zw.create_css",
+          "group": "a_web@444"
+        },
+        {
+          "command": "zw.create_module.css",
+          "group": "a_web@445"
+        },
+        {
+          "command": "zw.create_php",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_go",
+          "group": "z_navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.102.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "esbuild": "^0.24.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
