@@ -11,6 +11,19 @@
   "author": {
     "name": "ZhengWei513"
   },
+  "keywords": [
+    "新文件",
+    "新建",
+    "新建文件",
+    "新建文件夹",
+    "新文件夹",
+    "newfile",
+    "new-file",
+    "new file",
+    "createfile",
+    "create file",
+    "create-file"
+  ],
   "categories": [
     "Other"
   ],
@@ -26,12 +39,10 @@
       {
         "id": "mySubmenu",
         "label": "创建文件增强版"
-
       },
       {
         "id": "mySubmenu2",
         "label": "创建文件夹增强版"
-
       }
     ],
     "commands": [

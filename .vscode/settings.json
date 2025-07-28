@@ -12,5 +12,6 @@
   "typescript.tsc.autoDetect": "off",
   "[json]": {
     "editor.formatOnSave": false
-  }
+  },
+  "cSpell.words": ["createfile"]
 }
