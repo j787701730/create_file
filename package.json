@@ -2,7 +2,7 @@
   "name": "create-file-zw",
   "displayName": "create-file-zw",
   "description": "创建文件增强版",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.102.0"
   },
@@ -26,6 +26,12 @@
       {
         "id": "mySubmenu",
         "label": "创建文件增强版"
+
+      },
+      {
+        "id": "mySubmenu2",
+        "label": "创建文件夹增强版"
+
       }
     ],
     "commands": [
@@ -68,14 +74,141 @@
       {
         "command": "zw.create_go",
         "title": "go"
-      }
+      },
+      {
+        "command": "zw.create_js",
+        "title": "js"
+      },
+      {
+        "command": "zw.create_c",
+        "title": "c"
+      },
+      {
+        "command": "zw.create_h",
+        "title": "h"
+      },
+      {
+        "command": "zw.create_cpp",
+        "title": "cpp"
+      },
+      {
+        "command": "zw.create_java",
+        "title": "java"
+      },
+      {
+        "command": "zw.create_cs",
+        "title": "cs"
+      },
+      {
+        "command": "zw.create_rs",
+        "title": "rs"
+      },
+      {
+        "command": "zw.create_swift",
+        "title": "swift"
+      },
+      {
+        "command": "zw.create_kt",
+        "title": "kt"
+      },
+      {
+        "command": "zw.create_py",
+        "title": "py"
+      },
+      {
+        "command": "zw.create_mjs",
+        "title": "mjs"
+      },
+      {
+        "command": "zw.create_scss",
+        "title": "scss"
+      },
+      {
+        "command": "zw.create_sass",
+        "title": "sass"
+      },
+      {
+        "command": "zw.create_less",
+        "title": "less"
+      },
+      {
+        "command": "zw.create_json",
+        "title": "json"
+      },
+      {
+        "command": "zw.create_yaml",
+        "title": "yaml"
+      },
+      {
+        "command": "zw.create_md",
+        "title": "md"
+      },
+      {
+        "command": "zw.create_toml",
+        "title": "toml"
+      },
+      {
+        "command": "zw.create_bat",
+        "title": "bat"
+      },
+      {
+        "command": "zw.create_jl",
+        "title": "jl"
+      },
+      {
+        "command": "zw.create_lua",
+        "title": "lua"
+      },
+      {
+        "command": "zw.create_sh",
+        "title": "sh"
+      },
+      {
+        "command": "zw.create_ini",
+        "title": "ini"
+      },
+      { "command": "zw.create_dir_src", "title": "src" },
+      { "command": "zw.create_dir_dist", "title": "dist" },
+      { "command": "zw.create_dir_lib", "title": "lib" },
+      { "command": "zw.create_dir_assets", "title": "assets" },
+      { "command": "zw.create_dir_docs", "title": "docs" },
+      { "command": "zw.create_dir_tests", "title": "tests" },
+      { "command": "zw.create_dir_config", "title": "config" },
+      { "command": "zw.create_dir_scripts", "title": "scripts" },
+      { "command": "zw.create_dir_temp", "title": "temp" },
+      { "command": "zw.create_dir_public", "title": "public" },
+      { "command": "zw.create_dir_utils", "title": "utils" },
+      { "command": "zw.create_dir_components", "title": "components" },
+      { "command": "zw.create_dir_pages", "title": "pages" },
+      { "command": "zw.create_dir_views", "title": "views" },
+      { "command": "zw.create_dir_router", "title": "router" },
+      { "command": "zw.create_dir_store", "title": "store" },
+      { "command": "zw.create_dir_hooks", "title": "hooks" },
+      { "command": "zw.create_dir_styles", "title": "styles" },
+      { "command": "zw.create_dir_plugins", "title": "plugins" },
+      { "command": "zw.create_dir_layouts", "title": "layouts" },
+      { "command": "zw.create_dir_controllers", "title": "controllers" },
+      { "command": "zw.create_dir_services", "title": "services" },
+      { "command": "zw.create_dir_handlers", "title": "handlers" },
+      { "command": "zw.create_dir_models", "title": "models" },
+      { "command": "zw.create_dir_routes", "title": "routes" },
+      { "command": "zw.create_dir_middleware", "title": "middleware" },
+      { "command": "zw.create_dir_db", "title": "db" },
+      { "command": "zw.create_dir_api", "title": "api" },
+      { "command": "zw.create_dir_configs", "title": "configs" },
+      { "command": "zw.create_dir_jobs", "title": "jobs" }
     ],
     "menus": {
       "explorer/context": [
         {
           "submenu": "mySubmenu",
-          "group": "navigation",
+          "group": "navigation@1",
           "label": "创建文件增强版"
+        },
+        {
+          "submenu": "mySubmenu2",
+          "group": "navigation@2",
+          "label": "创建文件夹增强版"
         }
       ],
       "mySubmenu": [
@@ -90,6 +223,10 @@
         {
           "command": "zw.create_ts",
           "group": "a_web@111"
+        },
+        {
+          "command": "zw.create_js",
+          "group": "a_web@112"
         },
         {
           "command": "zw.create_html",
@@ -118,7 +255,127 @@
         {
           "command": "zw.create_go",
           "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_c",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_h",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_cpp",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_java",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_cs",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_rs",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_swift",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_kt",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_py",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_mjs",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_scss",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_sass",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_less",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_json",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_yaml",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_md",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_toml",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_bat",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_jl",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_lua",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_sh",
+          "group": "z_navigation"
+        },
+        {
+          "command": "zw.create_ini",
+          "group": "z_navigation"
         }
+      ],
+      "mySubmenu2": [
+        { "command": "zw.create_dir_src", "group": "common" },
+        { "command": "zw.create_dir_dist", "group": "common" },
+        { "command": "zw.create_dir_lib", "group": "common" },
+        { "command": "zw.create_dir_assets", "group": "common" },
+        { "command": "zw.create_dir_docs", "group": "common" },
+        { "command": "zw.create_dir_tests", "group": "common" },
+        { "command": "zw.create_dir_config", "group": "common" },
+        { "command": "zw.create_dir_scripts", "group": "common" },
+        { "command": "zw.create_dir_temp", "group": "common" },
+        { "command": "zw.create_dir_public", "group": "common" },
+        { "command": "zw.create_dir_utils", "group": "common" },
+        { "command": "zw.create_dir_components", "group": "a_web" },
+        { "command": "zw.create_dir_pages", "group": "a_web" },
+        { "command": "zw.create_dir_views", "group": "a_web" },
+        { "command": "zw.create_dir_router", "group": "a_web" },
+        { "command": "zw.create_dir_store", "group": "a_web" },
+        { "command": "zw.create_dir_hooks", "group": "a_web" },
+        { "command": "zw.create_dir_styles", "group": "a_web" },
+        { "command": "zw.create_dir_plugins", "group": "a_web" },
+        { "command": "zw.create_dir_layouts", "group": "a_web" },
+        { "command": "zw.create_dir_controllers", "group": "backend" },
+        { "command": "zw.create_dir_services", "group": "backend" },
+        { "command": "zw.create_dir_handlers", "group": "backend" },
+        { "command": "zw.create_dir_models", "group": "backend" },
+        { "command": "zw.create_dir_routes", "group": "backend" },
+        { "command": "zw.create_dir_middleware", "group": "backend" },
+        { "command": "zw.create_dir_db", "group": "backend" },
+        { "command": "zw.create_dir_api", "group": "backend" },
+        { "command": "zw.create_dir_configs", "group": "backend" },
+        { "command": "zw.create_dir_jobs", "group": "backend" }
       ]
     }
   },
