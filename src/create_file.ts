@@ -37,6 +37,7 @@ export const commandsList = [
   "lua",
   "sh",
   "ini",
+  "empty",
 ];
 
 export const createFileFun = async (uri: Uri, suffix: string) => {
@@ -61,11 +62,12 @@ export const createFileFun = async (uri: Uri, suffix: string) => {
       // console.log("dirPath", vscode.Uri.parse(dirPath));
       uriTemp = Uri.parse(`/${dirPath}`);
     }
+    const suffixT = suffix === "empty" ? "" : `.${suffix}`;
 
-    const filePath = Uri.joinPath(uriTemp, `${fileName}.${suffix}`);
+    const filePath = Uri.joinPath(uriTemp, `${fileName}${suffixT}`);
 
     if (existsSync(filePath.fsPath)) {
-      window.showInformationMessage(`${fileName}.${suffix} 已存在`);
+      window.showInformationMessage(`${fileName}${suffixT} 已存在`);
       return;
     }
 

@@ -2,7 +2,6 @@ import { existsSync } from "fs";
 import { dirname } from "path";
 import { commands, FileType, Uri, window, workspace } from "vscode";
 
-
 export const commandDirPrev = "zw.create_dir_";
 export const commandsDirList = [
   "src",
@@ -35,12 +34,29 @@ export const commandsDirList = [
   "api",
   "configs",
   "jobs",
+  "empty",
 ];
 
 export const createDirFun = async (uri: Uri, suffix: string) => {
+  let suffixT: any = suffix;
   try {
+    if (suffixT === "empty") {
+      suffixT = await window.showInputBox({
+        placeHolder: "输入文件夹名称",
+      });
+      if (suffixT === undefined) {
+        return;
+      }
+      suffixT = `${suffixT || ""}`.trim();
+      // 判断取消事件
+      if (!suffixT) {
+        window.showInformationMessage(`文件夹名称不能为空`);
+        return;
+      }
+    }
+
     const stat = await workspace.fs.stat(uri);
-    console.log('stat', stat);
+    // console.log("stat", stat);
     let uriTemp = uri;
     if (stat.type === FileType.File) {
       const dirPath = dirname(uri.fsPath);
@@ -48,10 +64,10 @@ export const createDirFun = async (uri: Uri, suffix: string) => {
       uriTemp = Uri.parse(`/${dirPath}`);
     }
 
-    const filePath = Uri.joinPath(uriTemp, `${suffix}`);
+    const filePath = Uri.joinPath(uriTemp, `${suffixT}`);
 
     if (existsSync(filePath.fsPath)) {
-      window.showInformationMessage(`${suffix} 已存在`);
+      window.showInformationMessage(`${suffixT} 已存在`);
       return;
     }
 
