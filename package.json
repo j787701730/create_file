@@ -2,7 +2,7 @@
   "name": "create-file-zw",
   "displayName": "create-file-zw",
   "description": "新建文件扩展, 新建文件夹扩展",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "engines": {
     "vscode": "^1.102.0"
   },
