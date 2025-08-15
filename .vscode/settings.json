@@ -13,5 +13,6 @@
   "[json]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": ["createfile"]
+  "cSpell.words": ["createfile"],
+  "prettier.printWidth": 120
 }

@@ -1,6 +1,7 @@
 import { existsSync } from "fs";
 import { dirname } from "path";
 import { commands, FileType, Uri, window, workspace } from "vscode";
+import { t } from "./language";
 
 export const commandDirPrev = "zw.create_dir_";
 export const commandsDirList = [
@@ -42,7 +43,7 @@ export const createDirFun = async (uri: Uri, suffix: string) => {
   try {
     if (suffixT === "empty") {
       suffixT = await window.showInputBox({
-        placeHolder: "输入文件夹名称",
+        placeHolder: t("输入文件夹名称"),
       });
       if (suffixT === undefined) {
         return;
@@ -50,7 +51,7 @@ export const createDirFun = async (uri: Uri, suffix: string) => {
       suffixT = `${suffixT || ""}`.trim();
       // 判断取消事件
       if (!suffixT) {
-        window.showInformationMessage(`文件夹名称不能为空`);
+        window.showInformationMessage(`${t("文件夹名称不能为空")}`);
         return;
       }
     }
@@ -67,7 +68,7 @@ export const createDirFun = async (uri: Uri, suffix: string) => {
     const filePath = Uri.joinPath(uriTemp, `${suffixT}`);
 
     if (existsSync(filePath.fsPath)) {
-      window.showInformationMessage(`${suffixT} 已存在`);
+      window.showInformationMessage(`${suffixT} ${t("已存在")}`);
       return;
     }
 
@@ -79,6 +80,6 @@ export const createDirFun = async (uri: Uri, suffix: string) => {
 
     // vscode.window.showInformationMessage(`文件 ${fileName} 已创建`);
   } catch (error) {
-    window.showErrorMessage(`创建文件失败: ${error}`);
+    window.showErrorMessage(`${t("创建文件失败")}: ${error}`);
   }
 };

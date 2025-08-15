@@ -1,7 +1,7 @@
 {
   "name": "create-file-zw",
   "displayName": "create-file-zw",
-  "description": "创建文件增强版",
+  "description": "新建文件扩展, 新建文件夹扩展",
   "version": "0.0.6",
   "engines": {
     "vscode": "^1.102.0"
@@ -36,11 +36,11 @@
   "main": "./dist/extension.js",
   "contributes": {
     "submenus": [
-      { "id": "mySubmenu", "label": "创建文件增强版" },
-      { "id": "mySubmenu2", "label": "创建文件夹增强版" }
+      { "id": "mySubmenu", "label": "%新建文件扩展%" },
+      { "id": "mySubmenu2", "label": "%新建文件夹扩展%" }
     ],
     "commands": [
-      { "command": "zw.create_empty", "title": "自定义(custom)" },
+      { "command": "zw.create_empty", "title": "%自定义%" },
       { "command": "zw.create_html", "title": "html" },
       { "command": "zw.create_vue", "title": "vue" },
       { "command": "zw.create_ts", "title": "ts" },
@@ -74,7 +74,7 @@
       { "command": "zw.create_lua", "title": "lua" },
       { "command": "zw.create_sh", "title": "sh" },
       { "command": "zw.create_ini", "title": "ini" },
-      { "command": "zw.create_dir_empty", "title": "自定义(custom)" },
+      { "command": "zw.create_dir_empty", "title": "%自定义%" },
       { "command": "zw.create_dir_src", "title": "src" },
       { "command": "zw.create_dir_dist", "title": "dist" },
       { "command": "zw.create_dir_lib", "title": "lib" },
@@ -108,16 +108,8 @@
     ],
     "menus": {
       "explorer/context": [
-        {
-          "submenu": "mySubmenu",
-          "group": "navigation@1",
-          "label": "创建文件增强版"
-        },
-        {
-          "submenu": "mySubmenu2",
-          "group": "navigation@2",
-          "label": "创建文件夹增强版"
-        }
+        { "submenu": "mySubmenu", "group": "navigation@1", "label": "%新建文件扩展%" },
+        { "submenu": "mySubmenu2", "group": "navigation@2", "label": "%新建文件夹扩展%" }
       ],
       "mySubmenu": [
         { "command": "zw.create_empty", "group": "a_empty@1" },
@@ -125,10 +117,8 @@
         { "command": "zw.create_vue", "group": "a_web@2" },
         { "command": "zw.create_ts", "group": "a_web@111" },
         { "command": "zw.create_js", "group": "a_web@112" },
-        { "command": "zw.create_html", "group": "a_web@222" },
+        { "command": "zw.create_html", "group": "a_web@522" },
         { "command": "zw.create_svelte", "group": "a_web@333" },
-        { "command": "zw.create_css", "group": "a_web@444" },
-        { "command": "zw.create_module.css", "group": "a_web@445" },
         { "command": "zw.create_mjs", "group": "a_web@446" },
         { "command": "zw.create_dart", "group": "z_navigation" },
         { "command": "zw.create_php", "group": "z_navigation" },
@@ -142,10 +132,12 @@
         { "command": "zw.create_swift", "group": "z_navigation" },
         { "command": "zw.create_kt", "group": "z_navigation" },
         { "command": "zw.create_py", "group": "z_navigation" },
-        { "command": "zw.create_scss", "group": "z_navigation" },
-        { "command": "zw.create_sass", "group": "z_navigation" },
-        { "command": "zw.create_less", "group": "z_navigation" },
-        { "command": "zw.create_json", "group": "z_navigation" },
+        { "command": "zw.create_css", "group": "css_navigation@1" },
+        { "command": "zw.create_module.css", "group": "css_navigation@20" },
+        { "command": "zw.create_scss", "group": "css_navigation@22" },
+        { "command": "zw.create_sass", "group": "css_navigation@23" },
+        { "command": "zw.create_less", "group": "css_navigation@24" },
+        { "command": "zw.create_json", "group": "json_navigation" },
         { "command": "zw.create_yaml", "group": "z_navigation" },
         { "command": "zw.create_md", "group": "z_navigation" },
         { "command": "zw.create_toml", "group": "z_navigation" },
